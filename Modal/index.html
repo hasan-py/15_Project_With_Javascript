@@ -1,0 +1,49 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Modal</title>
+	<!-- Must need to connect css  -->
+	<link rel="stylesheet" href="./style.css">
+</head>
+<body id="body" class="bg-gray-100 z-1">
+
+	<main class="w-full h-full flex items-center justify-center px-4">
+
+		<div class="px-4 py-16 md:px-10 flex flex-col items-center shadow-lg">
+			<h1 class="text-5xl text-blue-600 font-semibold">Modal Project</h1>
+			<div class="flex items-center mt-8">
+				<button id="modalBtn" class="decrease text-sm text-center px-2 md:px-4 py-1 m-1 rounded-lg bg-white uppercase tracking-widest text-gray-900 hover:bg-gray-900 font-semibold transition ease-in duration-200 hover:text-gray-100 focus:outline-none border-gray-800 border-2">Open Modal</button>
+			</div>
+		</div>
+		<div id="modalContent" class="hidden fixed flex flex-col items-center p-64 bg-white rounded-lg shadow-lg z-10">
+			<h1 class="text-5xl text-gray-800 font-bold">Modal</h1>
+			<button id="closeModal" class="text-lg text-gray-800 font-semibold border-2 px-4 py-1 rounded-full border-gray-800 focus:outline-none">Close</button>
+		</div>
+
+	</main>
+
+	<script>
+		let modalBtn = document.querySelector('#modalBtn');
+		let closeModal = document.querySelector('#closeModal');
+		let modalContent = document.querySelector('#modalContent'); 
+		let body = document.querySelector('#body'); 
+
+		modalBtn.addEventListener('click', function(e) {
+			modalContent.classList.remove("hidden")
+			body.classList.remove("bg-gray-100")
+			body.classList.add("bg-black")
+			body.classList.add("bg-opacity-25")
+		});
+
+		closeModal.addEventListener('click', function(e) {
+			modalContent.classList.add("hidden")
+			body.classList.remove("bg-black")
+			body.classList.remove("bg-opacity-25")
+			body.classList.add("bg-gray-100")
+		});
+
+	</script>
+
+</body>
+</html>
