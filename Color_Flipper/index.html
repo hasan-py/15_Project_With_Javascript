@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Color Flipper | Simple </title>
+	<!-- Must need to connect css  -->
+	<link rel="stylesheet" href="./style.css">
+</head>
+<body class="bg-gray-100">
+
+	<nav class="flex items-center justify-between bg-white shadow-lg px-4 py-4  md:px-64">
+		<div class="text-2xl font-semibold text-blue-600 tracking-widest">Color Flipper</div>
+		<div class="flex items-center">
+			<a class="mr-4 text-gray-800 text-lg tracking-widest" href="index.html">Simple</a>
+			<a class="mr-4 text-gray-800 text-lg tracking-widest" href="hex.html">Hex</a>
+		</div>
+	</nav>
+
+	<main class="w-full h-screen -mt-16 flex items-center justify-center">
+		<div class="p-4 md:px-10 bg-black flex flex-col items-center rounded-lg">
+			<h1 class="text-4xl text-white tracking-widest font-semibold">Background Color: </h1>
+			<span id="colorName" class="text-white mb-4 tracking-widest text-xl">GRAY</span>
+			<button id="btn" class="text-center text-sm border-2 px-4 py-1 rounded bg-black uppercase tracking-widest text-white hover:bg-white hover:text-black focus:outline-none">Click</button>
+		</div>
+	</main>
+
+	<script src="./app.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Reviews</title>
+	<!-- Must need to connect css  -->
+	<link rel="stylesheet" href="./style.css">
+</head>
+<body class="bg-gray-100">
+
+	<main class="w-full h-full flex items-center justify-center px-4">
+		<div class="space-y-8">
+			<!-- Title -->
+			<div class="flex flex-col items-center">
+				<h3 class="text-4xl font-semibold text-gray-800 tracking-wider">Our Reviews</h3>
+				<hr class="w-24 border-indigo-600 border-2 rounded">
+			</div>
+			<!-- Reviews -->
+			<div class="flex flex-col items-center bg-white px-10 py-6 max-w-md shadow-lg rounded-lg">
+				<img id="avatar" class="w-32 h-32 object-cover rounded-full" src="https://source.unsplash.com/6anudmpILw4" alt="avatar">
+				<div id="author" class="text-gray-800 font-bold text-xl">Jhon Doe</div>
+				<div id="job" class="text-indigo-600 text-sm uppercase tracking-wider font-semibold">Ux Desiginer</div>
+				<div id="bio" class="text-gray-600 text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad quas repellat tenetur a obcaecati cum ut, suscipit. Deserunt eligendi natus impedit architecto ea, veniam ex saepe dignissimos distinctio fugit modi.</div>
+				<div class="flex flex-row">
+					<span id="preBtn" class="cursor-pointer"><svg viewBox="0 0 20 20" fill="currentColor" class="chevron-left w-10 h-10 fill-current text-indigo-600"><path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg></span>
+					<span id="nextBtn" class="cursor-pointer"><svg viewBox="0 0 20 20" fill="currentColor" class="chevron-right w-10 h-10 fill-current text-indigo-600"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg></span>
+				</div>
+				<div>
+					<button id="surpriseBtn" class="mt-3 text-indigo-500 border rounded-full px-3 py-1 border-indigo-600 hover:bg-indigo-600 hover:text-white focus:outline-none">Surprise Me</button>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<script src="./app.js"></script>
+
+</body>
+</html>
