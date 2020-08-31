@@ -12,9 +12,9 @@
 
 	<main class="w-full flex flex-col items-center justify-center px md:px-24 py-16">
 		<!-- Title -->
-		<div style="font-family: 'Dancing Script', cursive;" class="text-2xl md:text-5xl font-semibold text-yellow-700">Genarel Questions</div>
+		<div style="font-family: 'Dancing Script', cursive;" class="text-3xl md:text-5xl font-semibold text-yellow-700">Genarel Questions</div>
 		<!-- Card -->
-		<div class="flex flex-col w-4/5 md:w-2/3 bg-white shadow-md rounded-lg px-4 md:px-8 py-4 space-y-2 divide-y divide-gray-400 m-4">		
+		<div class="question flex flex-col w-4/5 lg:w-2/3 bg-white shadow-md rounded-lg px-4 md:px-8 py-4 space-y-2 divide-y divide-gray-400 m-4">		
 			<div class="flex items-center justify-between space-x-8">
 				<div class="capitalize tracking-widest font-semibold text-sm md:text-lg">
 					Do you Accept All Major Credit Cards?
@@ -33,7 +33,7 @@
 			</div>
 		</div>
 		<!-- Card -->
-		<div class="flex flex-col w-4/5 md:w-2/3 bg-white shadow-md rounded-lg px-4 md:px-8 py-4 space-y-2 divide-y divide-gray-400 m-4">		
+		<div class="question flex flex-col w-4/5 lg:w-2/3 bg-white shadow-md rounded-lg px-4 md:px-8 py-4 space-y-2 divide-y divide-gray-400 m-4">		
 			<div class="flex items-center justify-between space-x-8">
 				<div class="capitalize tracking-widest font-semibold text-sm md:text-lg">
 					Do you use Fartilizer?
@@ -52,7 +52,7 @@
 			</div>
 		</div>
 		<!-- Card -->
-		<div class="flex flex-col w-4/5 md:w-2/3 bg-white shadow-md rounded-lg px-4 md:px-8 py-4 space-y-2 divide-y divide-gray-400 m-4">		
+		<div class="question flex flex-col w-4/5 lg:w-2/3 bg-white shadow-md rounded-lg px-4 md:px-8 py-4 space-y-2 divide-y divide-gray-400 m-4">		
 			<div class="flex items-center justify-between space-x-8">
 				<div class="capitalize tracking-widest font-semibold text-sm md:text-lg">
 					Do you support local farmers?
@@ -81,6 +81,13 @@
 
 		allBtn.forEach(function(btn,index) {
 			btn.addEventListener('click', function(e) {
+				/* This is for remove all open content */
+				allContent.forEach(function(con,index) {
+					con.classList.add("hidden")
+					allBtn1[index].classList.add("hidden")
+					allBtn[index].classList.remove("hidden")
+				});
+
 				allContent[index].classList.remove("hidden")
 				allBtn1[index].classList.remove("hidden")
 				btn.classList.add("hidden")
@@ -95,6 +102,18 @@
 				btn.classList.add("hidden")
 			});
 		});
+
+		/*
+		let questions = document.querySelectorAll('.question');
+
+		questions.forEach(function(qus) {
+			let btn = qus.querySelector('.btn');
+			btn.addEventListener('click', function(e) {
+				console.log(qus.querySelector('.content'));
+			});
+		});
+		*/
+
 	</script>
 
 </body>

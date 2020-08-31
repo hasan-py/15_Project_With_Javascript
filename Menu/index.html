@@ -1,0 +1,55 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Questions</title>
+	<!-- Must need to connect css  -->
+	<link rel="stylesheet" href="./style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;562;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body class="bg-gray-100 flex flex-col items-center justify-center px-8 md:px-24 py-16">
+
+	<main class="w-full">
+		
+		<section class="mb-10">
+			<!-- Title -->
+			<div class="flex flex-col items-center space-y-2 mb-4">
+				<h2 class="text-4xl font-semibold tracking-widest text-gray-800">Our Menu</h2>
+				<hr class="border-2 border-yellow-700 w-1/5">
+			</div>
+			<!-- Filter Button -->
+			<div class="flex items-center justify-center space-x-2">
+				<button data-cat="all" class="categoryBtn px-2 md:px-4 text-sm md:text-md capitalize py-1 border-2 border-yellow-600 font-semibold rounded  focus:outline-none hover:bg-yellow-600 hover:text-white transition ease-out duration-300 text-white bg-yellow-600">all</button>
+				<button data-cat="breakfast" class="categoryBtn px-2 md:px-4 text-sm md:text-md capitalize py-1 border-2 border-yellow-600 font-semibold rounded text-yellow-600 focus:outline-none hover:bg-yellow-600 hover:text-white transition ease-out duration-300">breakfast</button>
+				<button data-cat="lunch" class="categoryBtn px-2 md:px-4 text-sm md:text-md capitalize py-1 border-2 border-yellow-600 font-semibold rounded text-yellow-600 focus:outline-none hover:bg-yellow-600 hover:text-white transition ease-out duration-300">lunch</button>
+				<button data-cat="dinner" class="categoryBtn px-2 md:px-4 text-sm md:text-md capitalize py-1 border-2 border-yellow-600 font-semibold rounded text-yellow-600 focus:outline-none hover:bg-yellow-600 hover:text-white transition ease-out duration-300">dinner</button>
+			</div>
+		</section>
+		
+		<!-- Menu Items -->
+		<section id="menuSection" class="grid sm:px-12 md:px-0 md:grid-cols-2">
+
+			<!-- Single Card -->
+			<!-- <div class="col-span-1 mb-6 md:mx-4 lg:flex">
+				<img class="h-48 w-full object-cover object-center border-4 border-yellow-700 rounded-lg mb-2 lg:w-48" src="https://source.unsplash.com/I7A_pHLcQK8" alt="">
+				<div class="lg:flex lg:flex-col lg:ml-6">
+					<div class="flex items-center justify-between">
+						<div class="text-xl font-semibold tracking-widest text-gray-800">Bueatiful Burger</div>
+						<div class="text-yellow-700 font-semibold ">$16</div>
+					</div>
+					<hr class="border-gray-400 my-1">
+					<div class="text-gray-600">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo assumenda molestiae itaque esse, libero illum!
+					</div>
+				</div>
+			</div> -->
+
+		</section>
+
+	</main>
+
+
+	<script src="./app.js"></script>
+</body>
+</html>
