@@ -18,7 +18,8 @@ const giveawayDate = document.querySelector('#giveawayDate');
 const countDown = document.querySelectorAll('.countDown');
 const countDownElement = document.querySelector("#countDownElement");
 
-const futureDate = new Date(2020, 8, 16, 00, 0, 0);
+let newDate = new Date();
+const futureDate = new Date(newDate.getFullYear(), newDate.getMonth(), newDate.getDate()+10, 00, 0, 0);
 
 let year = futureDate.getFullYear();
 let month = months[futureDate.getMonth()];
