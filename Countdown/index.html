@@ -1,0 +1,68 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body class="bg-gray-200 flex flex-col items-center">
+
+    <div class="flex flex-col w-full md:flex-row lg:w-4/5 px-4 py-4 md:py-16 md:items-center md:px-8 ">
+        <div class="md:mr-8 md:w-1/2">
+            <img class="object-cover rounded" src="https://source.unsplash.com/kylL5DcscOA" alt="pic">
+        </div>
+        <div class="mt-2 md:mt-0 md:w-1/2">
+            <div class="uppercase font-bold text-2xl xl:text-4xl text-blue-700 tracking-widest">Old iphone giveway</div>
+            <div id="giveawayDate" class="text-blue-900 font-bold tracking-widest">Give</div>
+            <div class="text-gray-700 mt-4 mb-8 md:mb-4">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic aspernatur quis excepturi, quos vero, delectus? Itaque eum deserunt suscipit accusantium adipisci ducimus nemo, est. Laboriosam eligendi unde consectetur veritatis illo.
+            </div>
+            <div id="countDownElement" class="flex items-center">
+                <div class="bg-blue-900 rounded text-gray-200 px-2 mr-2 py-2 md:px-4 md:py-2 ">
+                    <div class="countDown font-bold text-4xl md:text-2xl text-center">
+                        <span>
+                            <svg viewBox="0 0 20 20" fill="currentColor" class="refresh animate-spin w-4 h-4">
+                                <path fill-rule="evenodd" d="M4 2a1 1 0 011 1v2.101a7.002 7.002 0 0111.601 2.566 1 1 0 11-1.885.666A5.002 5.002 0 005.999 7H9a1 1 0 010 2H4a1 1 0 01-1-1V3a1 1 0 011-1zm.008 9.057a1 1 0 011.276.61A5.002 5.002 0 0014.001 13H11a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0v-2.101a7.002 7.002 0 01-11.601-2.566 1 1 0 01.61-1.276z" clip-rule="evenodd"></path>
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="tracking-widest text-sm uppercase font-light text-center">Days</div>
+                </div>
+                <div class="bg-blue-900 rounded text-gray-200 text-center px-1 mx-2 py-2 md:px-2 md:py-2 ">
+                    <div class="countDown font-bold text-4xl md:text-2xl">
+                        <span>
+                            <svg viewBox="0 0 20 20" fill="currentColor" class="refresh animate-spin w-4 h-4">
+                                <path fill-rule="evenodd" d="M4 2a1 1 0 011 1v2.101a7.002 7.002 0 0111.601 2.566 1 1 0 11-1.885.666A5.002 5.002 0 005.999 7H9a1 1 0 010 2H4a1 1 0 01-1-1V3a1 1 0 011-1zm.008 9.057a1 1 0 011.276.61A5.002 5.002 0 0014.001 13H11a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0v-2.101a7.002 7.002 0 01-11.601-2.566 1 1 0 01.61-1.276z" clip-rule="evenodd"></path>
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="racking-widest text-sm uppercase font-light text-center">Hours</div>
+                </div>
+                <div class="bg-blue-900 rounded text-gray-200 px-2 mx-2 py-2 md:px-4 md:py-2 ">
+                    <div class="countDown font-bold text-4xl md:text-2xl text-center">
+                        <span>
+                            <svg viewBox="0 0 20 20" fill="currentColor" class="refresh animate-spin w-4 h-4">
+                                <path fill-rule="evenodd" d="M4 2a1 1 0 011 1v2.101a7.002 7.002 0 0111.601 2.566 1 1 0 11-1.885.666A5.002 5.002 0 005.999 7H9a1 1 0 010 2H4a1 1 0 01-1-1V3a1 1 0 011-1zm.008 9.057a1 1 0 011.276.61A5.002 5.002 0 0014.001 13H11a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0v-2.101a7.002 7.002 0 01-11.601-2.566 1 1 0 01.61-1.276z" clip-rule="evenodd"></path>
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="tracking-widest text-sm uppercase font-light text-center">Mins</div>
+                </div>
+                <div class="bg-blue-900 rounded text-gray-200 px-2 mx-2 py-2 md:px-4 md:py-2 ">
+                    <div class="countDown font-bold text-4xl md:text-2xl text-center">
+                        <span>
+                            <svg viewBox="0 0 20 20" fill="currentColor" class="refresh animate-spin w-4 h-4">
+                                <path fill-rule="evenodd" d="M4 2a1 1 0 011 1v2.101a7.002 7.002 0 0111.601 2.566 1 1 0 11-1.885.666A5.002 5.002 0 005.999 7H9a1 1 0 010 2H4a1 1 0 01-1-1V3a1 1 0 011-1zm.008 9.057a1 1 0 011.276.61A5.002 5.002 0 0014.001 13H11a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0v-2.101a7.002 7.002 0 01-11.601-2.566 1 1 0 01.61-1.276z" clip-rule="evenodd"></path>
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="tracking-widest text-sm uppercase font-light text-center">Secs</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+
+</body>
+</html>
