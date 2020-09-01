@@ -1,0 +1,56 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Scroll</title>
+	<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+	<section class="relative">
+		<div class="bg-black">		
+			<img class="h-full w-full object-cover object-center opacity-50" src="https://source.unsplash.com/NhG05ImWSIo" alt="hero">
+		</div>
+		<nav class="absolute inset-0">
+			<div class="md:hidden flex items-center justify-between bg-gray-100 px-4 py-2 shadow-lg"> 			
+				<h2 class="text-black text-xl font-semibold">Website logo</h2>
+				<div>
+					<svg viewBox="0 0 20 20" fill="currentColor" class="menu w-8 h-8 fill-current text-black"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+				</div>
+			</div>
+			<div class="hidden md:block md:flex md:items-center md:justify-between md:px-32 md:py-4">			
+				<a href="#" class="z-10 text-white text-3xl font-semibold">Website Logo</a>
+				<div class="md:space-x-6 lg:space-x-12 z-10">
+					<a href="#about" class="link text-white font-semibold text-lg border-b-2 border-transparent hover:border-green-700">Home</a>
+					<a href="#contact" class="link text-white font-semibold text-lg border-b-2 border-transparent hover:border-green-700">About</a>
+					<a href="#footer" class="link text-white font-semibold text-lg border-b-2 border-transparent hover:border-green-700">Contact us </a>
+				</div>
+				<div class="md:hidden">
+					<svg viewBox="0 0 20 20" fill="currentColor" class="menu w-8 h-8 fill-current text-white"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+				</div>
+			</div>
+		</nav>
+		<div class="px-4 md:px-16 lg:px-32 absolute inset-0 text-center flex flex-col justify-center items-center">
+			<h1 class="text-gray-100 font-semibold text-4xl md:text-5xl lg:text-6xl uppercase tracking-wider">Scroll Project</h1>
+			<div class="text-gray-100 font-semibold md:text-xl mb-4">Lorem, ipsum dolor sit, amet consectetur adipisicing elit. Incidunt maiores saepe non, nemo veritatis vero fugit. Omnis ab tenetur ullam inventore saepe, sint, obcaecati quam consequuntur. Corporis, quo distinctio est?</div>
+			<div class="border-2 uppercase cursor-pointer tracking-widest border-green-600 text-gray-100 text-lg md:text-xl px-4 py-2 rounded hover:bg-green-600 transition ease-linear duration-300">Expolore Tours</div>
+		</div>	
+	</section>
+	<section id="about" class="bg-gray-100 h-64 py-64">
+		<div class="text-6xl text-center uppercase font-semibold">
+			ABout
+		</div>
+	</section>
+	<section id="contact" class="bg-green-300 h-64 py-64">
+		<div class="text-6xl text-center uppercase font-semibold">
+			Contact us
+		</div>
+	</section>
+	<footer id="footer" class="bg-gray-800 h-64 py-64">
+		<div class="text-sm text-center tracking-widest font-semibold text-gray-100">
+			Copyright hasan-py 2020. All right reserved
+		</div>
+	</footer>
+
+</body>
+</html>
