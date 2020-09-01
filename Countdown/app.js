@@ -28,7 +28,7 @@ let day = weekdays[futureDate.getDay()]
 let hours = format(futureDate.getHours())
 let minutes = format(futureDate.getMinutes())
 
-giveawayDate.textContent = `Giveaway end on ${day}, ${date} ${month} ${year} ${hours}:${minutes} AM`;
+giveawayDate.textContent = `Giveaway end on ${day}, ${date} ${month} ${year} ${hours}:${minutes}`;
 
 // Future Time in ms
 const futureTime = futureDate.getTime();
@@ -60,7 +60,6 @@ function getRemainingTime() {
     }
 
 }
-
 
 // CountDown
 let countDownTime = setInterval(getRemainingTime, 1000);
