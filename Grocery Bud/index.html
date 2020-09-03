@@ -1,0 +1,37 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Grocery Bud</title>
+	<link rel="stylesheet" href="./style.css">
+</head>
+<body class="bg-gray-200">
+
+	<div class="md:flex md:justify-center py-16">
+		<div class="flex flex-col items-center bg-white shadow-lg mx-4 md:w-3/5 space-y-4 py-4">
+			<!-- Header -->
+			<div class="text-2xl font-bold text-blue-700 tracking-widest">Grocery Bud</div>
+			<!-- Alert -->
+			<div id="alert" class="w-2/3">
+			</div>
+			<!-- Input -->
+			<div>
+				<form id="form" action="">
+					<div class="flex items-center justify-center">
+						<input id="input" class="bg-gray-200 focus:outline-none pl-4 py-2 rounded-l-full" type="text" placeholder="Your todos...">
+						<button id="seBtn" class="uppercase tracking-widest font-semibold rounded-r-full bg-blue-200 text-gray-800 px-4 py-2 focus:outline-none hover:bg-blue-300">Submit</button>
+					</div>
+				</form>
+			</div>
+			<!-- todo -->
+			<div id="todoList" class="w-full md:w-2/3 flex flex-col space-y-2 overflow-auto"></div>
+			<!-- Clear All  -->
+			<div id="clearAll" class="hidden text-center text-red-500 tracking-widest font-semibold capitalize hover:bg-gray-100 hover:text-red-600 rounded-full px-4 py-1 cursor-pointer">
+				clear List
+			</div>
+		</div>
+	</div>
+
+	<script src="./app.js"></script>
+</body>
+</html>
