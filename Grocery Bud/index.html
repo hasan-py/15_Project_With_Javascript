@@ -30,8 +30,113 @@
 				clear List
 			</div>
 		</div>
-	</div>
-
+	</div>f
 	<script src="./app.js"></script>
 </body>
 </html>
+
+
+def preview_page(request, sl):
+    applicant_image_form = ApplicantImageForm()
+    applicant_info = ApplicantInfo.objects.select_related(
+        'present_dist', 'present_ps', 'permanent_dist',
+        'permanent_ps'
+    ).get(sl=sl)
+    education_info = ApplicantEducation.objects.select_related(
+        'ssc_exam', 'hsc_exam', 'gra_exam', 'mas_exam',
+        'ssc_board', 'hsc_board', 'ssc_subject', 'hsc_subject',
+        'gra_subject', 'mas_subject', 'gra_institute', 'mas_institute'
+    ).get(invoice=applicant_info.sl)
+    if request.method == 'POST':
+        applicant_image_form = ApplicantImageForm(
+            request.POST or None, request.FILES or None
+        )
+        if applicant_image_form.is_valid():
+            instance = applicant_image_form.save(commit=False)
+            applicant = ApplicantInfo.objects.get(sl=sl)
+            invoice = applicant.invoice
+            try:
+                images_data = ApplicantImage.objects.get(invoice=applicant)
+            except Exception:
+                images_data = None
+            if not images_data:
+                instance.invoice = applicant
+                if instance.photo:
+                    im = Image.open(instance.photo)
+                    p_s = im.size
+                    if p_s[0] == 300 and p_s[1] == 300:
+                        im.thumbnail(size=(100, 100))
+                        thumb_io = BytesIO()
+                        rgb_im = im.convert('RGB')
+                        rgb_im.save(thumb_io, im.format, quality=100)
+                        instance.photo.save(
+                            f'{invoice}.png', ContentFile(thumb_io.getvalue()),
+                            save=False
+                        )
+                    else:
+                        context = {
+                            'applicant': applicant_info,
+                            'education': education_info,
+                            'form': applicant_image_form,
+                            'message': 'photo'
+                        }
+                        return render(request, 'dpe/preview.html', context)
+                if instance.signeture:
+                    im2 = Image.open(instance.signeture)
+                    s_s = im2.size
+                    if s_s[0] == 300 and s_s[1] == 80:
+                        im2.thumbnail(size=(100, 100))
+                        thumb_io = BytesIO()
+                        rgb_im2 = im2.convert('RGB')
+                        rgb_im2.save(thumb_io, im2.format, quality=100)
+                        instance.signeture.save(
+                            f'{invoice}.png', ContentFile(thumb_io.getvalue()),
+                            save=False
+                        )
+                    else:
+                        context = {
+                            'applicant': applicant_info,
+                            'education': education_info,
+                            'form': applicant_image_form,
+                            'message': 'signature'
+                        }
+                        return render(request, 'dpe/preview.html', context)
+                instance.save()
+                return redirect('final-report', invoice=invoice)
+            else:
+                return redirect('final-report', invoice=invoice)
+        else:
+            context = {
+                'applicant': applicant_info,
+                'education': education_info,
+                'form': applicant_image_form,
+                'message': ''
+            }
+            return render(request, 'dpe/preview.html', context)
+    context = {
+        'applicant': applicant_info,
+        'education': education_info,
+        'form': applicant_image_form
+    }
+    return render(request, 'dpe/preview.html', context)
+
+<form id="form" action="{% url 'final-report' applicant.invoice %}" method="post">
+	<input name="button" disabled id="button02" type="submit" value="Submit the Application" />
+	<input id="postUrl" type="hidden" value="{% url 'final-report' applicant.invoice %}
+	">
+</form>
+<script>
+	let postUrl = document.querySelector('#postUrl');
+	let form = document.querySelector('#form');
+
+	form.addEventListener('submit', function(e) {
+		e.preventDefault();
+		let URL = postUrl.value
+		ajaxSend(URL);
+	});
+
+	async function ajaxSend(URL){
+		let res = fetch(URL,{method: 'POST'})
+	}
+
+</script>
