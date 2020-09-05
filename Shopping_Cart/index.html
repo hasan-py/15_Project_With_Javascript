@@ -13,7 +13,7 @@
         <div class="cursor-pointer"><svg viewBox="0 0 20 20" fill="currentColor" class="menu w-8 h-8">
                 <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
             </svg></div>
-        <div class="text-2xl md:text-3xl font-semibold text-gray-800 tracking-widest">Comfy <span class="text-orange-600">House</span></div>
+        <div class="text-2xl md:text-3xl font-semibold text-gray-800 tracking-widest cursor-pointer">Comfy <span class="text-orange-600">House</span></div>
         <div id="cartOpenBtn" class="cursor-pointer relative flex items-center justify-start"><svg viewBox="0 0 20 20" fill="currentColor" class="shopping-cart w-8 h-8">
                 <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"></path>
             </svg>
@@ -23,7 +23,7 @@
 
 <!-- Header Section -->
     <section class="relative flex justify-center items-center">
-        <img class="w-full h-84 object-cover" src="./files/images/hero-bcg.jpeg" alt="hero">
+        <img class="w-full h-84 object-cover" src="./images/hero-bcg.jpeg" alt="hero">
         <div style="opacity:0.90;" class="absolute flex flex-col items-center space-y-2 bg-gray-100 py-6">
             <h1 class="uppercase text-center leading-tight text-5xl break-words font-bold mx-8 tracking-widest">Furniture collection</h1>
             <button class="uppercase bg-orange-500 text-black font-semibold tracking-widest px-4 py-3 shadow-lg hover:bg-orange-600 focus:outline-none hover:text-white">shop now</button>
@@ -34,18 +34,9 @@
 <!-- Product Section -->
     <section class="px-4 md:px-16 lg:px-20">
         <div class="text-center text-4xl text-gray-900 font-semibold">Our Products</div>
-	        <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+	        <div id="productList" class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
 	            <!-- Product card -->
-	            <div class="flex flex-col text-center md:col-span-1 mx-2 my-4 md:my-2">
-	                <div class="product relative flex items-center justify-end">
-	                    <img class="object-cover object-center" src="./files/images/product-1.jpeg" alt="product">
-	                    <button class="btn hidden absolute mt-20 md:mt-16 lg:mt-16 xl:mt-20 focus:outline-none flex items-center justify-center bg-orange-600 text-sm px-2 py-1 text-white font-semibold uppercase hover:text-black"><svg viewBox="0 0 20 20" fill="currentColor" class="shopping-cart w-4 h-4">
-	                            <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"></path>
-	                        </svg> <span class="ml-1">Add to cart</span></button>
-	                </div>
-	                <div class="text-gray-800 text-xl font-semibold tracking-widest">Queen bad</div>
-	                <div class="text-orange-600 font-semibold">$16</div>
-	            </div>
+	            
 	            <!-- End Product card -->
 	        </div>
     </section>
@@ -53,38 +44,41 @@
 
 <!-- Cart Section | This section is fixed in top-0 right-0 -->
     <button id="blackOverlay" class="hidden fixed z-30 inset-0 h-full w-full bg-orange-500 opacity-25 cursor-default"></button>
-    <section id="cartSection" class="hidden fixed top-0 right-0 z-40 w-full h-full flex flex-col px-4 py-4 bg-orange-100 md:w-2/5 lg:w-1/3">
+    <section id="cartSection" class="hidden fixed top-0 right-0 z-40 w-full h-full flex flex-col px-8 py-4 bg-orange-100 md:w-2/5 lg:w-1/3">
         <div id="cartCloseBtn" class="w-1/3"><svg viewBox="0 0 20 20" fill="currentColor" class="x w-6 h-6 border-2 text-white font-bold bg-black border-none cursor-pointer">
                 <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
             </svg></div>
         <div class="text-center text-gray-900 font-semibold text-2xl mt-2 mb-4">Your Cart</div>
         <!-- Cart product -->
-        <div class="flex justify-between">
-            <div class="flex">
-                <img class="object-cover object-center h-20 w-32 mr-4" src="./files/images/product-2.jpeg" alt="cart-product">
-                <div class="flex flex-col">
-                    <div class="text-lg font-semibold">Counch</div>
-                    <div class="text-lg font-semibold">$42</div>
-                    <div class="text-gray-600 text-sm">remove</div>
+        <div id="productInCart">
+            <div class="flex justify-between mb-4">
+                <div class="flex">
+                    <img class="object-cover object-center h-24 w-24 mr-4" src="./images/product-2.jpeg" alt="cart-product">
+                    <div class="flex flex-col">
+                        <div class="text-lg font-semibold">Counch</div>
+                        <div class="text-lg font-semibold">$42</div>
+                        <div class="text-gray-600 text-sm">remove</div>
+                    </div>
+                </div>
+                <div class="flex flex-col justify-center items-center">
+                    <span><svg viewBox="0 0 20 20" fill="currentColor" class="chevron-up w-4 h-4 fill-current text-orange-600 cursor-pointer">
+                            <path fill-rule="evenodd" d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z" clip-rule="evenodd"></path>
+                        </svg></span>
+                    <span class="text-black font-semibold">7</span>
+                    <span>
+                        <svg viewBox="0 0 20 20" fill="currentColor" class="chevron-down w-4 h-4 fill-current text-orange-600 cursor-pointer">
+                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                        </svg>
+                    </span>
                 </div>
             </div>
-            <div class="flex flex-col justify-center items-center">
-                <span><svg viewBox="0 0 20 20" fill="currentColor" class="chevron-up w-4 h-4 fill-current text-orange-600 cursor-pointer">
-                        <path fill-rule="evenodd" d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z" clip-rule="evenodd"></path>
-                    </svg></span>
-                <span class="text-black font-semibold">7</span>
-                <span>
-                    <svg viewBox="0 0 20 20" fill="currentColor" class="chevron-down w-4 h-4 fill-current text-orange-600 cursor-pointer">
-                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-                    </svg>
-                </span>
-            </div>
         </div>
+
         <!-- Cart product -->
         <!-- Order total -->
         <div class="text-center text-xl font-semibold mt-8">Your Total: <span>$502.84</span></div>
         <div class="flex justify-center">
-            <button class="tracking-widest bg-orange-500 text-black uppercase font-semibold px-4 py-2 hover:text-white hover:bg-orange-600 focus:outline-none shadow-lg">Clear cart</button>
+            <button id="clearCart" class="tracking-widest bg-orange-500 text-black uppercase font-semibold px-4 py-2 hover:text-white hover:bg-orange-600 focus:outline-none shadow-lg">Clear cart</button>
         </div>
     </section>
 <!-- End Cart Section -->
